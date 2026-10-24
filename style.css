@@ -79,15 +79,18 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    padding: 10px 22px;
+    padding: 12px 25px;
     background: #2563eb;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
     background: #1d4ed8;
+    transform: translateY(-2px);
 }
 
 .section {
@@ -112,13 +115,19 @@ nav a:hover {
 }
 
 .skill {
-    padding: 15px;
+    padding: 18px 12px;
     text-align: center;
     border: 1px solid #dbeafe;
     background: #eff6ff;
     color: #1d4ed8;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.15);
 }
 
 .section a {
@@ -149,5 +158,89 @@ footer {
     .section {
         margin: 20px 5%;
         padding: 24px;
+    }
+}
+/* Responsive design for tablets and mobile phones */
+
+@media (max-width: 768px) {
+    header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 50px 7%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section {
+        margin: 20px 5%;
+        padding: 22px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 8px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero h2 {
+        font-size: 20px;
     }
 }
