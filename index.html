@@ -7,23 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <a class="logo" href="#home">MyPortfolio</a>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <div class="logo">MyPortfolio</div>
+
+    <button id="menu-toggle" aria-label="Toggle navigation"
+        aria-expanded="false">☰</button>
+
+    <nav id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="./assests/resume.pdf"
+   download="resume.pdf"
+   class="resume-button">
+    Download My Resume
+</a>
+<a href="#education">Education</a>
+    </nav>
+
+    <button id="theme-toggle">Dark Mode</button>
+</header>
 
     <main>
         <section id="home" class="hero">
+            <section id="about" class="section reveal"></section>
             <div>
                 <p class="tag">WELCOME TO MY PORTFOLIO</p>
                 <h1>Hello, I'm <span>Anjali Lingampalli</span></h1>
                 <h2>Aspiring Software Developer</h2>
+                <button onclick="showWelcomeMessage()">Click Me</button>
                 <p>
                     I am a BCA student passionate about technology,
                     programming and creating useful websites.
@@ -59,27 +73,66 @@
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <p class="tag">LET'S CONNECT</p>
-            <h2>Contact Me</h2>
-            <p>Email: anjali.lingampalli10@gmail.com</p>
+        <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to connect with me!</p>
+
+    <a href="mailto:anjali.lingampalli10@gmail.com">Email Me</a>
+
+    <a href="https://github.com/Anjali200510?tab=overview&from=2026-09-01&to=2026-09-30"
+       target="_blank">GitHub</a>
+
+    <a href="https://www.linkedin.com/in/anjali-lingampalli-530762278?"
+       target="_blank">LinkedIn</a>
+</section>
+<section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <p class="section-description">
+        Here are some projects I have worked on.
+    </p>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
             <p>
-                LinkedIn:
-                <a href="https://www.linkedin.com/in/anjali-lingampalli-530762278?"
-                   rel="noopener noreferrer">My LinkedIn Profile</a>
+                A responsive portfolio website created using
+                HTML, CSS, and JavaScript to showcase my skills
+                and projects.
             </p>
+            <a href="https://github.com/Anjali200510/My-portfolio"
+               target="_blank" rel="noopener noreferrer">
+                View GitHub
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Performance Analyzer</h3>
             <p>
-                GitHub:
-                <a href="https://github.com/Anjali200510?tab=overview&from=2026-09-01&to=2026-09-30" target="_blank"
-                   rel="noopener noreferrer">My GitHub Profile</a>
+                A project idea for analyzing student marks
+                and presenting academic performance clearly.
             </p>
-        </section>
+            <a href="#contact">Ask Me About This Project</a>
+        </div>
+
+    </div>
+</section>
+<section id="education" class="education-section">
+    <h2>Education</h2>
+
+    <div class="education-card">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>Final-Year Student</p>
+        <p>College: Vaagdevi Degree and PG College </p>
+        <p>Expected Graduation: 2027</p>
+    </div>
+</section>
     </main>
 
     <footer>
         <p>© 2026 Anjali Lingampalli | Personal Portfolio</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
 
